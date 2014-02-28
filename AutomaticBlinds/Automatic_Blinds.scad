@@ -1,7 +1,7 @@
 //
 // settings
 //
-show_extras = true;
+show_extras = false;
 
 motor_mountsize_x = 24;
 motor_mountsize_y = 12;
