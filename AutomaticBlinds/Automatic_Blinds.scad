@@ -1,11 +1,11 @@
 //
 // settings
 //
-show_extras = false;
+show_extras = true;
 
 motor_mountsize_x = 24;
 motor_mountsize_y = 12;
-motor_mountsize_z = 25;
+motor_mountsize_z = 29;
 
 motor_diameter = 12;
 motor_flat = 10;
@@ -39,18 +39,19 @@ module servo(screwlength) {
 	mountingplate_hole_offset_y = 1;
 	mountingplate_hole_diameter = 3;
 
-	servo_width = 13;
-	servo_length = 25;
-	servo_height = 20;
+	servo_width = 17;
+	servo_length = 31;
+	servo_height = 28.4;
 
-	mountingplate_height = 2;
-	mountingplate_legnth = servo_length + 10;
+	mountingplate_height = 2.5;
+	// mountingplate_legnth = servo_length + 10;
+	mountingplate_legnth = 42.8;
 	mountingplate_width = servo_width;
 
-	servo_axel_offset = 6;
-	servo_axel_height = 6;
+	servo_axel_offset = 8.2;
+	servo_axel_height = 3;
 
-	servo_top_height = 2;
+	servo_top_height = 9;
 	translate([0,-servo_length/2+servo_axel_offset,-servo_height/2+mountingplate_height+servo_top_height]) {
 		union() {
 			//gearbox
@@ -160,4 +161,6 @@ blinds_mount();
 
 // undercarrage();
 
-// servo(10);
+// rotate([-90,180,0]) {
+// 	servo(10);
+// }
